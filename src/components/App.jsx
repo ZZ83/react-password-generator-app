@@ -1,5 +1,7 @@
+import Password from "./Password";
+
 function App() {
-    return <h1 className="text-3xl font-bold underline">Hello React!!!</h1>;
+    return <div className="h-screen w-full bg-gray-800 font-jetBrainsMono text-400 text-white"></div>;
 }
 
 export default App;
