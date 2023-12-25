@@ -11,7 +11,7 @@ function App() {
                 <main>
                     <Password />
                     <div className="bg-gray-600 px-4 pb-4 pt-4 md:px-8 md:pb-8 md:pt-6">
-                        <CharaterLength charaterLength={charaterLength} />
+                        <CharaterLength charaterLength={charaterLength} setCharaterLength={setCharaterLength} />
                     </div>
                 </main>
             </div>
