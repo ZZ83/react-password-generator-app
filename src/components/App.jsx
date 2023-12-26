@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Password from "./Password";
 import CharaterLength from "./CharaterLength";
+import Checkboxes from "./Checkboxes";
 
 function App() {
     const [charaterLength, setCharaterLength] = useState(10);
@@ -12,6 +13,7 @@ function App() {
                     <Password />
                     <div className="bg-gray-600 px-4 pb-4 pt-4 md:px-8 md:pb-8 md:pt-6">
                         <CharaterLength charaterLength={charaterLength} setCharaterLength={setCharaterLength} />
+                        <Checkboxes />
                     </div>
                 </main>
             </div>
