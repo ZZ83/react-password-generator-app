@@ -13,10 +13,10 @@ function Checkboxes() {
                         height="12"
                         xmlns="http://www.w3.org/2000/svg"
                     >
-                        <path stroke="#18171F" stroke-width="3" fill="none" d="M1 5.607 4.393 9l8-8" />
+                        <path stroke="#18171F" strokeWidth="3" fill="none" d="M1 5.607 4.393 9l8-8" />
                     </svg>
                 </div>
-                <label className="cursor-pointer text-300 xs:text-400 md:text-500" for="uppercaseCheckbox">
+                <label className="cursor-pointer text-300 xs:text-400 md:text-500" htmlFor="uppercaseCheckbox">
                     Include Uppercase Letters
                 </label>
             </div>
@@ -33,10 +33,10 @@ function Checkboxes() {
                         height="12"
                         xmlns="http://www.w3.org/2000/svg"
                     >
-                        <path stroke="#18171F" stroke-width="3" fill="none" d="M1 5.607 4.393 9l8-8" />
+                        <path stroke="#18171F" strokeWidth="3" fill="none" d="M1 5.607 4.393 9l8-8" />
                     </svg>
                 </div>
-                <label className="cursor-pointer text-300 xs:text-400 md:text-500" for="lowercaseCheckbox">
+                <label className="cursor-pointer text-300 xs:text-400 md:text-500" htmlFor="lowercaseCheckbox">
                     Include Lowercase Letters
                 </label>
             </div>
@@ -53,10 +53,10 @@ function Checkboxes() {
                         height="12"
                         xmlns="http://www.w3.org/2000/svg"
                     >
-                        <path stroke="#18171F" stroke-width="3" fill="none" d="M1 5.607 4.393 9l8-8" />
+                        <path stroke="#18171F" strokeWidth="3" fill="none" d="M1 5.607 4.393 9l8-8" />
                     </svg>
                 </div>
-                <label className="cursor-pointer text-300 xs:text-400 md:text-500" for="numbersCheckbox">
+                <label className="cursor-pointer text-300 xs:text-400 md:text-500" htmlFor="numbersCheckbox">
                     Include Numbers
                 </label>
             </div>
@@ -73,10 +73,10 @@ function Checkboxes() {
                         height="12"
                         xmlns="http://www.w3.org/2000/svg"
                     >
-                        <path stroke="#18171F" stroke-width="3" fill="none" d="M1 5.607 4.393 9l8-8" />
+                        <path stroke="#18171F" strokeWidth="3" fill="none" d="M1 5.607 4.393 9l8-8" />
                     </svg>
                 </div>
-                <label className="cursor-pointer text-300 xs:text-400 md:text-500" for="symbolsCheckbox">
+                <label className="cursor-pointer text-300 xs:text-400 md:text-500" htmlFor="symbolsCheckbox">
                     Include Symbols
                 </label>
             </div>
