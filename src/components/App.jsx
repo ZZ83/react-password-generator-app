@@ -14,6 +14,9 @@ function App() {
                     <div className="bg-gray-600 px-4 pb-4 pt-4 md:px-8 md:pb-8 md:pt-6">
                         <CharaterLength charaterLength={charaterLength} setCharaterLength={setCharaterLength} />
                         <Checkboxes />
+                        <section className="mb-4 flex items-center justify-between bg-gray-700 px-4 py-3.5 md:mb-8 md:px-8 md:py-5">
+                            <h2 className="mt-0.5 text-300 xs:mt-0 xs:text-400 md:text-500">STRENGTH</h2>
+                        </section>
                     </div>
                 </main>
             </div>
