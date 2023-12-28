@@ -3,6 +3,7 @@ import Password from "./Password";
 import CharaterLength from "./CharaterLength";
 import Checkboxes from "./Checkboxes";
 import StrengthMeter from "./StrengthMeter";
+import Generate from "./Generate";
 
 function App() {
     const [charaterLength, setCharaterLength] = useState(10);
@@ -19,6 +20,7 @@ function App() {
                             <h2 className="mt-0.5 text-300 xs:mt-0 xs:text-400 md:text-500">STRENGTH</h2>
                             <StrengthMeter />
                         </section>
+                        <Generate charaterLength={charaterLength} />
                     </div>
                 </main>
             </div>
