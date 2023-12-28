@@ -2,6 +2,7 @@ import { useState } from "react";
 import Password from "./Password";
 import CharaterLength from "./CharaterLength";
 import Checkboxes from "./Checkboxes";
+import StrengthMeter from "./StrengthMeter";
 
 function App() {
     const [charaterLength, setCharaterLength] = useState(10);
@@ -16,6 +17,7 @@ function App() {
                         <Checkboxes />
                         <section className="mb-4 flex items-center justify-between bg-gray-700 px-4 py-3.5 md:mb-8 md:px-8 md:py-5">
                             <h2 className="mt-0.5 text-300 xs:mt-0 xs:text-400 md:text-500">STRENGTH</h2>
+                            <StrengthMeter />
                         </section>
                     </div>
                 </main>
