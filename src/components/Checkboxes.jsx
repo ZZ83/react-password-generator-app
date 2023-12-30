@@ -1,4 +1,10 @@
-function Checkboxes() {
+function Checkboxes({ isCheckboxChecked, setIsCheckboxChecked }) {
+    function handleCheckboxChange(str, event) {
+        const copy = { ...isCheckboxChecked };
+        copy[str] = event.target.checked;
+        setIsCheckboxChecked({ ...copy });
+    }
+
     return (
         <section>
             <div className="mb-5 flex gap-5 md:gap-6">
@@ -6,6 +12,9 @@ function Checkboxes() {
                     <input
                         className="checked:before:bg-red-500 peer relative h-5 w-5 cursor-pointer appearance-none border-2 border-white checked:border-green checked:bg-green hover:border-green"
                         type="checkbox"
+                        onChange={(event) => {
+                            handleCheckboxChange("uppercase", event);
+                        }}
                     />
                     <svg
                         className="pointer-events-none absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100"
@@ -26,6 +35,9 @@ function Checkboxes() {
                     <input
                         className="checked:before:bg-red-500 peer relative h-5 w-5 cursor-pointer appearance-none border-2 border-white checked:border-green checked:bg-green hover:border-green"
                         type="checkbox"
+                        onChange={(event) => {
+                            handleCheckboxChange("lowercase", event);
+                        }}
                     />
                     <svg
                         className="pointer-events-none absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100"
@@ -46,6 +58,9 @@ function Checkboxes() {
                     <input
                         className="checked:before:bg-red-500 peer relative h-5 w-5 cursor-pointer appearance-none border-2 border-white checked:border-green checked:bg-green hover:border-green"
                         type="checkbox"
+                        onChange={(event) => {
+                            handleCheckboxChange("numbers", event);
+                        }}
                     />
                     <svg
                         className="pointer-events-none absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100"
@@ -66,6 +81,9 @@ function Checkboxes() {
                     <input
                         className="checked:before:bg-red-500 peer relative h-5 w-5 cursor-pointer appearance-none border-2 border-white checked:border-green checked:bg-green hover:border-green"
                         type="checkbox"
+                        onChange={(event) => {
+                            handleCheckboxChange("symbols", event);
+                        }}
                     />
                     <svg
                         className="pointer-events-none absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100"
