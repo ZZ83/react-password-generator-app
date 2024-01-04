@@ -1,4 +1,5 @@
-function GeneratePassword() {
+function GeneratePassword({ isCheckboxChecked }) {
+    const isAtLeastOneTrue = Object.values(isCheckboxChecked).includes(true);
     return (
         <button
             id="generateButton"
