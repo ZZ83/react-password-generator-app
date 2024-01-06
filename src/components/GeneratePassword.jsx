@@ -1,9 +1,14 @@
 function GeneratePassword({ isCheckboxChecked }) {
     const isAtLeastOneTrue = Object.values(isCheckboxChecked).includes(true);
+    function generatePassword() {
+        console.log("Generating password...");
+    }
     return (
         <button
             id="generateButton"
-            onClick={() => {}}
+            onClick={() => {
+                generatePassword();
+            }}
             className="flex h-14 w-full items-center justify-center bg-green fill-gray-600 text-gray-600 hover:border-2 hover:border-solid hover:border-green hover:bg-gray-600 hover:fill-green hover:text-green md:h-16 md:text-500"
         >
             GENERATE
