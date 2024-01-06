@@ -3,7 +3,7 @@ import Password from "./Password";
 import CharaterLength from "./CharaterLength";
 import Checkboxes from "./Checkboxes";
 import StrengthMeter from "./StrengthMeter";
-import GeneratePassword from "./Generate";
+import GeneratePassword from "./GeneratePassword";
 
 function App() {
     const [charaterLength, setCharaterLength] = useState(10);
