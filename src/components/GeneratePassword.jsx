@@ -1,4 +1,4 @@
-function GeneratePassword({ isCheckboxChecked }) {
+function GeneratePassword() {
     function generatePassword() {
         const isAtLeastOneTrue = Object.values(isCheckboxChecked).includes(true);
         console.log("Generating password...");
