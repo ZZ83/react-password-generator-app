@@ -9,11 +9,12 @@ function App() {
     const [charaterLength, setCharaterLength] = useState(10);
 
     const [isCheckboxChecked, setIsCheckboxChecked] = useState({
-        uppercase: false,
-        lowercase: false,
-        numbers: false,
-        symbols: false,
+        uppercase: [false, "(?=.*[A-Z])", "ABCDEFGHIJKLMNOPQRSTUVWXYZ"],
+        lowercase: [false, "(?=.*[a-z])", "abcdefghijklmnopqrstuvwxyz"],
+        numbers: [false, "(?=.*[0-9])", "0123456789"],
+        symbols: [false, "(?=.*[!@#$%^&*])", "!@#$%^&*"],
     });
+
     return (
         <div className="h-screen w-full bg-gray-800 font-jetBrainsMono text-400 text-white">
             <div className="mx-auto max-w-[35.75rem] px-4">
@@ -22,7 +23,7 @@ function App() {
                     <Password />
                     <div className="bg-gray-600 px-4 pb-4 pt-4 md:px-8 md:pb-8 md:pt-6">
                         <CharaterLength charaterLength={charaterLength} setCharaterLength={setCharaterLength} />
-                        <Checkboxes isCheckboxChecked={isCheckboxChecked} setIsCheckboxChecked={setIsCheckboxChecked} />
+                        <Checkboxes handleCheckboxChange={handleCheckboxChange} />
                         <section className="mb-4 flex items-center justify-between bg-gray-700 px-4 py-3.5 md:mb-8 md:px-8 md:py-5">
                             <h2 className="mt-0.5 text-300 xs:mt-0 xs:text-400 md:text-500">STRENGTH</h2>
                             <StrengthMeter />
