@@ -15,6 +15,12 @@ function App() {
         symbols: [false, "(?=.*[!@#$%^&*])", "!@#$%^&*"],
     });
 
+    function handleCheckboxChange(str, event) {
+        const copy = { ...isCheckboxChecked };
+        copy[str][0] = event.target.checked;
+        setIsCheckboxChecked({ ...copy });
+    }
+
     return (
         <div className="h-screen w-full bg-gray-800 font-jetBrainsMono text-400 text-white">
             <div className="mx-auto max-w-[35.75rem] px-4">
