@@ -21,6 +21,11 @@ function App() {
         setIsCheckboxChecked({ ...copy });
     }
 
+    function generatePassword() {
+        const isAtLeastOneTrue = Object.values(isCheckboxChecked).includes(true);
+        console.log("Generating password...");
+    }
+
     return (
         <div className="h-screen w-full bg-gray-800 font-jetBrainsMono text-400 text-white">
             <div className="mx-auto max-w-[35.75rem] px-4">
