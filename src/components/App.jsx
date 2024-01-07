@@ -22,9 +22,15 @@ function App() {
     }
 
     function generatePassword() {
+        let regularExp = "";
         const isAtLeaseOneTrue = Object.values(isCheckboxChecked).filter((arr) => arr.includes(true));
         if (isAtLeaseOneTrue.length >= 1 && charaterLength > 0) {
-            console.log("Generate Password...");
+            for (const key in isCheckboxChecked) {
+                if (isCheckboxChecked[key][0] === true) {
+                    regularExp += isCheckboxChecked[key][1];
+                }
+            }
+            regularExp = new RegExp(regularExp);
         } else {
             alert("Please select at least one checkbox");
         }
