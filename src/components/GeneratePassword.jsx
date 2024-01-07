@@ -1,4 +1,4 @@
-function GeneratePassword() {
+function GeneratePassword({ generatePassword }) {
     return (
         <button
             id="generateButton"

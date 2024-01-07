@@ -39,7 +39,7 @@ function App() {
                             <h2 className="mt-0.5 text-300 xs:mt-0 xs:text-400 md:text-500">STRENGTH</h2>
                             <StrengthMeter />
                         </section>
-                        <GeneratePassword charaterLength={charaterLength} isCheckboxChecked={isCheckboxChecked} />
+                        <GeneratePassword generatePassword={generatePassword} />
                     </div>
                 </main>
             </div>
