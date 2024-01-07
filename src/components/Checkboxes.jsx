@@ -1,10 +1,4 @@
-function Checkboxes({ isCheckboxChecked, setIsCheckboxChecked }) {
-    function handleCheckboxChange(str, event) {
-        const copy = { ...isCheckboxChecked };
-        copy[str] = event.target.checked;
-        setIsCheckboxChecked({ ...copy });
-    }
-
+function Checkboxes({ handleCheckboxChange }) {
     return (
         <section>
             <div className="mb-5 flex gap-5 md:gap-6">
