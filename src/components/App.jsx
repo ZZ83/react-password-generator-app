@@ -22,8 +22,12 @@ function App() {
     }
 
     function generatePassword() {
-        const isAtLeastOneTrue = Object.values(isCheckboxChecked).includes(true);
-        console.log("Generating password...");
+        const isAtLeaseOneTrue = Object.values(isCheckboxChecked).filter((arr) => arr.includes(true));
+        if (isAtLeaseOneTrue.length >= 1 && charaterLength > 0) {
+            console.log("Generate Password...");
+        } else {
+            alert("Please select at least one checkbox");
+        }
     }
 
     return (
