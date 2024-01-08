@@ -6,6 +6,7 @@ import StrengthMeter from "./StrengthMeter";
 import GeneratePassword from "./GeneratePassword";
 
 function App() {
+    const [password, setPassword] = useState("");
     const [charaterLength, setCharaterLength] = useState(10);
 
     const [isCheckboxChecked, setIsCheckboxChecked] = useState({
@@ -40,7 +41,7 @@ function App() {
             for (let i = 0; i < charaterLength - 4; i++) {
                 password += getRandomCharater(passwordCharaters);
             }
-            console.log(password.slice(0, charaterLength));
+            setPassword(password.slice(0, charaterLength));
         } else {
             alert("Please select at least one checkbox");
         }
@@ -51,7 +52,7 @@ function App() {
             <div className="mx-auto max-w-[35.75rem] px-4">
                 <h1 className="pt-16 text-center text-gray-500 md:pt-32 md:text-600">Password Generator</h1>
                 <main>
-                    <Password />
+                    <Password password={password} />
                     <div className="bg-gray-600 px-4 pb-4 pt-4 md:px-8 md:pb-8 md:pt-6">
                         <CharaterLength charaterLength={charaterLength} setCharaterLength={setCharaterLength} />
                         <Checkboxes handleCheckboxChange={handleCheckboxChange} />

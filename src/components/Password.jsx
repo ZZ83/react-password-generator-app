@@ -1,7 +1,9 @@
-function Password() {
+function Password({ password }) {
     return (
         <section className="relative mb-4 mt-4 flex h-16 items-center justify-between bg-gray-600 px-4 md:mb-6 md:mt-8 md:h-20 md:px-8">
-            <span className="text-500 before:opacity-25 empty:before:content-['P4$5W0rD!'] xs:text-[20px] sm:text-600 md:text-700"></span>
+            <span className="text-500 before:opacity-25 empty:before:content-['P4$5W0rD!'] xs:text-[20px] sm:text-600 md:text-700">
+                {password}
+            </span>
             <svg
                 className="h-5 w-[1.094] cursor-pointer fill-green hover:fill-white md:h-6 md:w-[1.313]"
                 viewBox="0 0 21 24"
