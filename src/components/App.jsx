@@ -27,15 +27,20 @@ function App() {
     }
 
     function generatePassword() {
+        let password = "";
         let passwordCharaters = "";
         const isAtLeaseOneTrue = Object.values(isCheckboxChecked).filter((arr) => arr.includes(true));
         if (isAtLeaseOneTrue.length >= 1 && charaterLength > 0) {
             for (const key in isCheckboxChecked) {
                 if (isCheckboxChecked[key][0] === true) {
                     passwordCharaters += isCheckboxChecked[key][1];
-                    console.log(getRandomCharater(isCheckboxChecked[key][1]));
+                    password += getRandomCharater(isCheckboxChecked[key][1]);
                 }
             }
+            for (let i = 0; i < charaterLength - 4; i++) {
+                password += getRandomCharater(passwordCharaters);
+            }
+            console.log(password.slice(0, charaterLength));
         } else {
             alert("Please select at least one checkbox");
         }
