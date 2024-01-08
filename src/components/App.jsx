@@ -38,7 +38,7 @@ function App() {
                     password += getRandomCharater(isCheckboxChecked[key][1]);
                 }
             }
-            for (let i = 0; i < charaterLength - 4; i++) {
+            for (let i = 0; i < charaterLength; i++) {
                 password += getRandomCharater(passwordCharaters);
             }
             setPassword(password.slice(0, charaterLength));
