@@ -9,10 +9,10 @@ function App() {
     const [charaterLength, setCharaterLength] = useState(10);
 
     const [isCheckboxChecked, setIsCheckboxChecked] = useState({
-        uppercase: [false, "(?=.*[A-Z])", "ABCDEFGHIJKLMNOPQRSTUVWXYZ"],
-        lowercase: [false, "(?=.*[a-z])", "abcdefghijklmnopqrstuvwxyz"],
-        numbers: [false, "(?=.*[0-9])", "0123456789"],
-        symbols: [false, "(?=.*[!@#$%^&*])", "!@#$%^&*"],
+        uppercase: [false, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"],
+        lowercase: [false, "abcdefghijklmnopqrstuvwxyz"],
+        numbers: [false, "0123456789"],
+        symbols: [false, "!@#$%^&*"],
     });
 
     function handleCheckboxChange(str, event) {
@@ -21,16 +21,21 @@ function App() {
         setIsCheckboxChecked({ ...copy });
     }
 
+    function getRandomCharater(string) {
+        let randomIndex = Math.floor(Math.random() * string.length);
+        return string[randomIndex];
+    }
+
     function generatePassword() {
-        let regularExp = "";
+        let passwordCharaters = "";
         const isAtLeaseOneTrue = Object.values(isCheckboxChecked).filter((arr) => arr.includes(true));
         if (isAtLeaseOneTrue.length >= 1 && charaterLength > 0) {
             for (const key in isCheckboxChecked) {
                 if (isCheckboxChecked[key][0] === true) {
-                    regularExp += isCheckboxChecked[key][1];
+                    passwordCharaters += isCheckboxChecked[key][1];
+                    console.log(getRandomCharater(isCheckboxChecked[key][1]));
                 }
             }
-            regularExp = new RegExp(regularExp);
         } else {
             alert("Please select at least one checkbox");
         }
