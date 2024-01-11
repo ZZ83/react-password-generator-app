@@ -6,6 +6,9 @@ function Password({ password }) {
             </span>
             <svg
                 className="h-5 w-[1.094] cursor-pointer fill-green hover:fill-white md:h-6 md:w-[1.313]"
+                onClick={() => {
+                    navigator.clipboard.writeText(password);
+                }}
                 viewBox="0 0 21 24"
                 xmlns="http://www.w3.org/2000/svg"
             >
