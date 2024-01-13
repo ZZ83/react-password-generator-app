@@ -2,7 +2,7 @@ import { useState } from "react";
 import Password from "./Password";
 import CharaterLength from "./CharaterLength";
 import Checkboxes from "./Checkboxes";
-import StrengthMeter from "./StrengthMeter";
+import PasswordStrengthMeter from "./PasswordStrengthMeter";
 import GeneratePassword from "./GeneratePassword";
 
 function App() {
@@ -58,7 +58,7 @@ function App() {
                         <Checkboxes handleCheckboxChange={handleCheckboxChange} />
                         <section className="mb-4 flex h-14 items-center justify-between bg-gray-700 px-4 md:mb-8 md:h-[4.5rem] md:px-8">
                             <h2 className="mt-0.5 text-300 xs:mt-0 xs:text-400 md:text-500">STRENGTH</h2>
-                            <StrengthMeter password={password} />
+                            <PasswordStrengthMeter password={password} />
                         </section>
                         <GeneratePassword generatePassword={generatePassword} />
                     </div>
