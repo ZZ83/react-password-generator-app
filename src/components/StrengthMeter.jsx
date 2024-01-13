@@ -1,4 +1,4 @@
-function StrengthMeter({ password }) {
+function PasswordStrengthMeter({ password }) {
     if (password === "") {
         return null;
     } else if (password.length >= 11) {
@@ -53,4 +53,4 @@ function StrengthMeter({ password }) {
     }
 }
 
-export default StrengthMeter;
+export default PasswordStrengthMeter;
