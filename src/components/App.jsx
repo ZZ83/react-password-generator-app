@@ -3,7 +3,7 @@ import Password from "./Password";
 import CharaterLength from "./CharaterLength";
 import Checkboxes from "./Checkboxes";
 import PasswordStrengthMeter from "./PasswordStrengthMeter";
-import GeneratePassword from "./GeneratePassword";
+import GeneratePasswordButton from "./GeneratePasswordButton";
 
 function App() {
     const [password, setPassword] = useState("");
@@ -60,7 +60,7 @@ function App() {
                             <h2 className="mt-0.5 text-300 xs:mt-0 xs:text-400 md:text-500">STRENGTH</h2>
                             <PasswordStrengthMeter password={password} />
                         </section>
-                        <GeneratePassword generatePassword={generatePassword} />
+                        <GeneratePasswordButton generatePassword={generatePassword} />
                     </div>
                 </main>
             </div>

@@ -1,4 +1,4 @@
-function GeneratePassword({ generatePassword }) {
+function GeneratePasswordButton({ generatePassword }) {
     return (
         <button
             id="generateButton"
@@ -15,4 +15,4 @@ function GeneratePassword({ generatePassword }) {
     );
 }
 
-export default GeneratePassword;
+export default GeneratePasswordButton;
