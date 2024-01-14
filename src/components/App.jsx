@@ -1,13 +1,18 @@
 import { useState } from "react";
 import Password from "./Password";
-import CharaterLength from "./CharaterLength";
+import PasswordCharaterLength from "./PasswordCharaterLength";
 import Checkboxes from "./Checkboxes";
 import PasswordStrengthMeter from "./PasswordStrengthMeter";
 import GeneratePasswordButton from "./GeneratePasswordButton";
 
+function getRandomCharater(string) {
+    let randomIndex = Math.floor(Math.random() * string.length);
+    return string[randomIndex];
+}
+
 function App() {
     const [password, setPassword] = useState("");
-    const [charaterLength, setCharaterLength] = useState(10);
+    const [passwordCharaterLength, setPasswordCharaterLength] = useState(10);
 
     const [isCheckboxChecked, setIsCheckboxChecked] = useState({
         uppercase: [false, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"],
@@ -22,26 +27,21 @@ function App() {
         setIsCheckboxChecked({ ...copy });
     }
 
-    function getRandomCharater(string) {
-        let randomIndex = Math.floor(Math.random() * string.length);
-        return string[randomIndex];
-    }
-
     function generatePassword() {
         let password = "";
         let passwordCharaters = "";
         const isAtLeaseOneTrue = Object.values(isCheckboxChecked).filter((arr) => arr.includes(true));
-        if (isAtLeaseOneTrue.length >= 1 && charaterLength > 0) {
+        if (isAtLeaseOneTrue.length >= 1 && passwordCharaterLength > 0) {
             for (const key in isCheckboxChecked) {
                 if (isCheckboxChecked[key][0] === true) {
                     passwordCharaters += isCheckboxChecked[key][1];
                     password += getRandomCharater(isCheckboxChecked[key][1]);
                 }
             }
-            for (let i = 0; i < charaterLength; i++) {
+            for (let i = 0; i < passwordCharaterLength; i++) {
                 password += getRandomCharater(passwordCharaters);
             }
-            setPassword(password.slice(0, charaterLength));
+            setPassword(password.slice(0, passwordCharaterLength));
         } else {
             alert("Please select at least one checkbox");
         }
@@ -54,7 +54,10 @@ function App() {
                 <main>
                     <Password password={password} />
                     <div className="bg-gray-600 px-4 pb-4 pt-4 md:px-8 md:pb-8 md:pt-6">
-                        <CharaterLength charaterLength={charaterLength} setCharaterLength={setCharaterLength} />
+                        <PasswordCharaterLength
+                            passwordCharaterLength={passwordCharaterLength}
+                            setPasswordCharaterLength={setPasswordCharaterLength}
+                        />
                         <Checkboxes handleCheckboxChange={handleCheckboxChange} />
                         <section className="mb-4 flex h-14 items-center justify-between bg-gray-700 px-4 md:mb-8 md:h-[4.5rem] md:px-8">
                             <h2 className="mt-0.5 text-300 xs:mt-0 xs:text-400 md:text-500">STRENGTH</h2>
