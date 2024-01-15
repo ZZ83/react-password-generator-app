@@ -1,7 +1,7 @@
 import { useState } from "react";
+import Checkboxes from "./Checkboxes";
 import Password from "./Password";
 import PasswordCharaterLength from "./PasswordCharaterLength";
-import Checkboxes from "./Checkboxes";
 import PasswordStrengthMeter from "./PasswordStrengthMeter";
 import GeneratePasswordButton from "./GeneratePasswordButton";
 
@@ -42,8 +42,6 @@ function App() {
                 password += getRandomCharater(passwordCharaters);
             }
             setPassword(password.slice(0, passwordCharaterLength));
-        } else {
-            alert("Please select at least one checkbox");
         }
     }
 
