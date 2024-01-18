@@ -10,6 +10,15 @@ export default {
             content: {
                 rightArrow: 'url("../assets/images/icon-arrow-right.svg")',
             },
+            animation: {
+                fade: "fadeOut 2.5s ease-in-out",
+            },
+            keyframes: {
+                fadeOut: {
+                    "0%": { opacity: 1 },
+                    "100%": { opacity: 0 },
+                },
+            },
         },
         colors: {
             red: "#F64A4A",
