@@ -23,7 +23,6 @@ function Password({ password }) {
                     } else {
                         navigator.clipboard.writeText(password);
                         handleButtonClick();
-                        console.log("Test");
                     }
                 }}
                 viewBox="0 0 21 24"
