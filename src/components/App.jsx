@@ -10,6 +10,13 @@ function getRandomCharater(string) {
     return string[randomIndex];
 }
 
+function shuffleString(str) {
+    return str
+        .split("")
+        .sort(() => 0.5 - Math.random())
+        .join("");
+}
+
 function App() {
     const [password, setPassword] = useState("");
     const [passwordCharaterLength, setPasswordCharaterLength] = useState(10);
