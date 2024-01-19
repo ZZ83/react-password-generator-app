@@ -5,9 +5,9 @@ import PasswordCharaterLength from "./PasswordCharaterLength";
 import PasswordStrengthMeter from "./PasswordStrengthMeter";
 import GeneratePasswordButton from "./GeneratePasswordButton";
 
-function getRandomCharater(string) {
-    let randomIndex = Math.floor(Math.random() * string.length);
-    return string[randomIndex];
+function getRandomCharater(str) {
+    let randomIndex = Math.floor(Math.random() * str.length);
+    return str[randomIndex];
 }
 
 function shuffleString(str) {
