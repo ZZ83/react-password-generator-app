@@ -2,14 +2,6 @@ import { useState } from "react";
 
 function Password({ password }) {
     const [show, setShow] = useState(false);
-
-    const handleButtonClick = () => {
-        setShow(true);
-        setTimeout(() => {
-            setShow(false);
-        }, 2500);
-    };
-
     return (
         <section className="relative mb-4 mt-4 flex h-16 items-center justify-between bg-gray-600 px-4 md:mb-6 md:mt-8 md:h-20 md:px-8">
             <span className="text-500 before:opacity-25 empty:before:content-['P4$5W0rD!'] xs:text-[20px] sm:text-600 md:text-700">
@@ -22,7 +14,10 @@ function Password({ password }) {
                         event.preventDefault();
                     } else {
                         navigator.clipboard.writeText(password);
-                        handleButtonClick();
+                        setShow(true);
+                        setTimeout(() => {
+                            setShow(false);
+                        }, 2500);
                     }
                 }}
                 viewBox="0 0 21 24"
