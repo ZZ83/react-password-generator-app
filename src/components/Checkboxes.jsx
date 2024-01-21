@@ -6,6 +6,7 @@ function Checkboxes({ handleCheckboxChange }) {
                 <div className="relative inline-flex items-center">
                     <input
                         className="checked:before:bg-red-500 peer relative h-5 w-5 cursor-pointer appearance-none border-2 border-white checked:border-green checked:bg-green hover:border-green"
+                        id="uppercaseCheckbox"
                         type="checkbox"
                         onChange={(event) => {
                             handleCheckboxChange("uppercase", event);
@@ -29,6 +30,7 @@ function Checkboxes({ handleCheckboxChange }) {
                 <div className="relative inline-flex items-center">
                     <input
                         className="checked:before:bg-red-500 peer relative h-5 w-5 cursor-pointer appearance-none border-2 border-white checked:border-green checked:bg-green hover:border-green"
+                        id="lowercaseCheckbox"
                         type="checkbox"
                         onChange={(event) => {
                             handleCheckboxChange("lowercase", event);
@@ -52,6 +54,7 @@ function Checkboxes({ handleCheckboxChange }) {
                 <div className="relative inline-flex items-center">
                     <input
                         className="checked:before:bg-red-500 peer relative h-5 w-5 cursor-pointer appearance-none border-2 border-white checked:border-green checked:bg-green hover:border-green"
+                        id="numbersCheckbox"
                         type="checkbox"
                         onChange={(event) => {
                             handleCheckboxChange("numbers", event);
@@ -75,6 +78,7 @@ function Checkboxes({ handleCheckboxChange }) {
                 <div className="relative inline-flex items-center">
                     <input
                         className="checked:before:bg-red-500 peer relative h-5 w-5 cursor-pointer appearance-none border-2 border-white checked:border-green checked:bg-green hover:border-green"
+                        id="symbolsCheckbox"
                         type="checkbox"
                         onChange={(event) => {
                             handleCheckboxChange("symbols", event);
