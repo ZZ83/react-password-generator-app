@@ -1,6 +1,7 @@
 function Checkboxes({ handleCheckboxChange }) {
     return (
         <section>
+            {/* Uppercase Checkbox */}
             <div className="mb-5 flex gap-5 md:gap-6">
                 <div className="relative inline-flex items-center">
                     <input
@@ -23,7 +24,7 @@ function Checkboxes({ handleCheckboxChange }) {
                     Include Uppercase Letters
                 </label>
             </div>
-
+            {/* Lowercase Checkbox */}
             <div className="mb-5 flex gap-5 md:gap-6">
                 <div className="relative inline-flex items-center">
                     <input
@@ -46,7 +47,7 @@ function Checkboxes({ handleCheckboxChange }) {
                     Include Lowercase Letters
                 </label>
             </div>
-
+            {/* Numbers Checkbox */}
             <div className="mb-5 flex gap-5 md:gap-6">
                 <div className="relative inline-flex items-center">
                     <input
@@ -69,7 +70,7 @@ function Checkboxes({ handleCheckboxChange }) {
                     Include Numbers
                 </label>
             </div>
-
+            {/* Symbols Checkbox */}
             <div className="mb-8 flex gap-5 md:gap-6">
                 <div className="relative inline-flex items-center">
                     <input

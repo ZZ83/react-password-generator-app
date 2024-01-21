@@ -20,7 +20,6 @@ function shuffleString(str) {
 function App() {
     const [password, setPassword] = useState("");
     const [passwordCharaterLength, setPasswordCharaterLength] = useState(10);
-
     const [isCheckboxChecked, setIsCheckboxChecked] = useState({
         uppercase: [false, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"],
         lowercase: [false, "abcdefghijklmnopqrstuvwxyz"],
@@ -48,6 +47,7 @@ function App() {
             for (let i = 0; i < passwordCharaterLength; i++) {
                 password += getRandomCharater(passwordCharaters);
             }
+            password = shuffleString(password);
             setPassword(password.slice(0, passwordCharaterLength));
         }
     }
