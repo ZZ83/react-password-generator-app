@@ -1,6 +1,15 @@
 function PasswordStrengthMeter({ password }) {
     if (password === "") {
-        return null;
+        return (
+            <div className="flex items-center gap-2 sm:gap-4 md:h-8">
+                <div className="flex gap-1 xs:gap-2">
+                    <div className="h-7 w-2.5 border-2 border-solid border-white"></div>
+                    <div className="h-7 w-2.5 border-2 border-solid border-white"></div>
+                    <div className="h-7 w-2.5 border-2 border-solid border-white"></div>
+                    <div className="h-7 w-2.5 border-2 border-solid border-white"></div>
+                </div>
+            </div>
+        );
     } else if (password.length >= 11) {
         return (
             <div className="flex items-center gap-2 sm:gap-4 md:h-8">
