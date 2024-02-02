@@ -27,8 +27,8 @@ function Password({ password }) {
             </svg>
 
             {show && (
-                <span className="absolute -top-5 right-0 animate-fade leading-4 text-green opacity-0 md:-top-8 md:text-500">
-                    Copied
+                <span className="absolute -top-5 right-0 animate-fade text-300 leading-4 text-green opacity-0 md:-top-8 md:text-500">
+                    COPIED
                 </span>
             )}
         </section>
