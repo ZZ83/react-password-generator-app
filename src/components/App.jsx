@@ -65,7 +65,7 @@ function App() {
                         />
                         <Checkboxes handleCheckboxChange={handleCheckboxChange} />
                         <section className="mb-4 flex h-14 items-center justify-between bg-gray-700 px-4 md:mb-8 md:h-[4.5rem] md:px-8">
-                            <h2 className="mt-0.5 text-300 xs:mt-0 xs:text-400 md:text-500">STRENGTH</h2>
+                            <h2 className="mt-0.5 text-300 text-gray-500 xs:mt-0 xs:text-400 md:text-500">STRENGTH</h2>
                             <PasswordStrengthMeter password={password} />
                         </section>
                         <GeneratePasswordButton generatePassword={generatePassword} />
