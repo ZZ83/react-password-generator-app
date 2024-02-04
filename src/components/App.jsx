@@ -44,10 +44,10 @@ function App() {
                     password += getRandomCharater(isCheckboxChecked[key][1]);
                 }
             }
-            for (let i = 0; i < passwordCharaterLength; i++) {
+            password = shuffleString(password);
+            for (let i = password.length; i < passwordCharaterLength; i++) {
                 password += getRandomCharater(passwordCharaters);
             }
-            password = shuffleString(password);
             setPassword(password.slice(0, passwordCharaterLength));
         }
     }
